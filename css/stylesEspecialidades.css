@@ -1,0 +1,70 @@
+@import "navbar_style.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+  }
+
+.container {
+    width: 70%;
+    margin: 3% auto;
+    display: grid;
+    place-content: center;
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 15vh));
+    gap: 15px;
+}
+
+.especialidad {
+    background-color: #e3e4e4;
+    display: grid;
+    text-align: center;
+    place-content: center;
+    padding: 2%;
+    grid-template-columns: 25% 50% 25%;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    height: 25%;
+    width: 80%;
+    background: #144a83 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: white;
+    transition: .4s ease;
+    box-shadow: 0 0 7px #BBB;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    box-shadow: -8px 8px 5px #AAA;
+    transform: scale(1.1);
+}
+
+
+
+.parrafo {
+    text-align: left;
+    display: grid;
+    place-content: left;
+    grid-template-rows: 30% 70%;
+}
