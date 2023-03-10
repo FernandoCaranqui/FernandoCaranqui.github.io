@@ -88,6 +88,14 @@ body {
     text-align: left;
     align-items: center;
   }
+
+.wrapper select{
+    cursor: pointer;
+}
+
+.wrapper input{
+    cursor: text;
+}
   
 .input-left {
     margin: 0px auto;
@@ -176,7 +184,7 @@ input, textarea {
     text-align: center;
     margin: 1rem;
     font-size: 36px;
-    padding: 2rem 0;
+    padding: 2rem 0 0;
 }
 
 .pregunta {
