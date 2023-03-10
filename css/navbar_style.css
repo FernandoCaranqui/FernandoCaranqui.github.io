@@ -1,8 +1,23 @@
+.logo-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    height: fit-content;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: black;
+}
+
+
+
+
+
 nav {
     height: 100vh;
     display: grid;
     place-content: center;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 6fr 1fr;
     grid-gap: 20px;
 }
 
@@ -65,8 +80,8 @@ img {
     align-self: center;
     justify-self: center;
     width: auto;
-    height: 13vh;
-    margin: 5%;
+    height: 15vh;
+    margin: 0%;
 }
 
 
@@ -76,6 +91,11 @@ div {
 
 
 .perfil svg {
-    height: 70px;
+    margin: 15% 0 0 0;
+    height: 50px;
     fill: white;
+}
+
+.perfil h2{
+    margin-bottom: 3%;
 }

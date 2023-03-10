@@ -18,7 +18,7 @@ body {
     display: grid;
     place-content: center;
     grid-template-rows: repeat(auto-fit, minmax(1fr, 15vh));
-    gap: 15px;
+    gap: 20px;
 }
 
 .especialidad {
@@ -27,7 +27,7 @@ body {
     text-align: center;
     place-content: center;
     padding: 2%;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% auto 25%;
     border: 1px solid;
     border-radius: 20px;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .btn button {
-    height: 25%;
+    height: 5vh;
     width: 80%;
     background: #144a83 100%;
     border: none;
