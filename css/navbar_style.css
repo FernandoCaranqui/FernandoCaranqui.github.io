@@ -1,10 +1,18 @@
+
 nav {
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    justify-content: center; 
 }
+
+header img{
+    width: 25%;
+    display: block;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-bottom: 0%;
+    margin-right: auto;
+  }
+  
 
 .banner {
     background-color: #144a83;
@@ -76,6 +84,6 @@ div {
 
 
 .perfil svg {
-    height: 70px;
+    height: 28px;
     fill: white;
 }

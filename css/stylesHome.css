@@ -12,6 +12,15 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+header img{
+  width: 25%;
+  display: block;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-bottom: 0%;
+  margin-right: auto;
+}
+
 
 .parrafo {
   text-align: left;
@@ -68,16 +77,22 @@ p{
 
 .cpersonal{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(4,1fr);
   align-self: center;
   align-items: center;
   
 }
+.cpersonal div{
+  display: flex;
+  justify-content: center; /*Centrar horizontalmente*/
+  align-items: center; /*Centrar verticalmente*/
+  
+}
 
 .dct{
-  width: 90%;
-  height: 80%;
+  width: 38%;
+  height: auto;
   border-radius: 20px;
 }
 
