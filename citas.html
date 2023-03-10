@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citas</title>
+    <title>Agendar Cita - Hospital Quito N°1</title>
     <link rel="stylesheet" type="text/css" href="css/stylesCitas.css">
 
 </head>
@@ -55,13 +54,13 @@
 
     <div class="parte_central" height="600">
         <div>
-            <h1 tabindex="7">AGENDAR CITA</h1>
+            <h1 tabindex="7">AGENDE SU CITA</h1>
         </div>
         <div>
             <form class="wrapper">
                 <div class="input-left">
-                  <label for="name" tabindex="8">Seleccione la especialidad:</label><br>
-                  <select name="op_especialidad" class="select-option" tabindex="9" required>
+                  <label for="select_especialidad" tabindex="8">Seleccione la especialidad:</label><br>
+                  <select name="op_especialidad" id="select_especialidad" class="select-option" tabindex="9" required>
                     <option value="" selected>Seleccione aquí su especialidad</option>
                     <option value="1">Medicina general</option>
                     <option value="2">Gastroenterología</option>
@@ -70,21 +69,35 @@
                 </select >
                 </div>
                 <div class="input-left">
-                    <label for="date1" tabindex="10">Seleccione el horario:</label><br>
-                    <input type="date" id="date1" class="select-option"  tabindex="11" required>
+                    <label for="date1" tabindex="10">Seleccione la fecha y la hora:</label><br>
+                    <input type="datetime-local" id="date1" class="select-option"  tabindex="11" step="3600" required>
                 </div>
                 <div class="input-right">
-                    <label for="txarea" tabindex="12">Razón de consulta</label><br>
-                    <textarea id="txarea" name="razonConsulta" aria-label="Ingrese su razón de consulta" tabindex="13" required></textarea>
+                    <label for="select_razon" tabindex="12">Razón de consulta:</label><br>
+                    <select name="razonConsulta" id="select_razon" class="select-option" tabindex="13" required>
+                        <option value="" selected>Seleccione aquí su razón de consulta</option>
+                        <option value="1">Revisión general</option>
+                        <option value="2">Consulta externa</option>
+                        <option value="3">Laboratorio</option>
+                        <option value="4">Tratamiento</option>
+                        <option value="otra">Otra (Especifique)</option>
+                    </select>
+                    <!--textarea id="txarea" name="razonConsulta" aria-label="Ingrese su razón de consulta" tabindex="13" required></textarea-->
                 </div>
+                
+                <div id="caja-otra-opcion" class="input-right" style="visibility: hidden; grid-row: 2 / 3;">
+                    <label for="otra-opcion">Indique su razón de consulta:</label><br>
+                    <input type="text" id="otra-opcion" name="otra-opcion" class="select-option">
+                </div>
+
                 <div class="btn">
-                    <button type="submit" tabindex="14" >Realizar consulta</button>
+                    <button type="submit" tabindex="14" onclick="confirmarEnvio()">Agendar</button>
                 </div>
                 
               </form>
         </div>
         <section class="faq">
-            <h1 tabindex="15">Preguntas Frecuentes</h1>
+            <h1 tabindex="15">Preguntas Frecuentes (FAQ)</h1>
             <div class="pregunta">
                 <div>
                     <h2 tabindex="16">¿Cómo agendar una consulta?</h2>
@@ -93,14 +106,14 @@
             </div>
             <div class="pregunta">
                 <div>
-                    <h2 tabindex="18">¿Cómo contactarme con el hospital o un especialista?</h2>
-                    <p tabindex="19">Contáctese al 4007100 opción 1 de lunes a viernes de 07h00 a 17h00 o envíe un mensaje por Whatsapp al 0987600940 de 09:00 a 16:30.</p>
+                    <h2 tabindex="18">¿Cómo visualizar las especialidades del hospital?</h2>
+                    <p tabindex="19">Dirígase a la sección de "Especialidad" y haga clic en el botón "ver más información" y visualice la información deseada.</p>
                 </div>
             </div>
             <div class="pregunta">
                 <div>
-                    <h2 tabindex="20">¿Cómo visualizar las especialidades del hospital?</h2>
-                    <p tabindex="21">Dirígase a la sección de "Especialidad" y haga clic en el botón "ver más información" y visualice la información deseada.</p>
+                    <h2 tabindex="20">¿Cómo contactarme con el hospital o un especialista?</h2>
+                    <p tabindex="21">Contáctese al 4007100 opción 1 de lunes a viernes de 07h00 a 17h00 o envíe un mensaje por Whatsapp al 0987600940 de 09:00 a 16:30.</p>
                 </div>
             </div>
         </section>
@@ -112,15 +125,48 @@
 </script>
 <script>
     // Obtener la fecha actual
-    let fechaActual = new Date();
+    let dateTimeActual = new Date();
+    let diffZonaHoraria = dateTimeActual.getTimezoneOffset();
+    let dateTimeActualconDiff = new Date(dateTimeActual.getTime() - (diffZonaHoraria * 60000));
 
-    // Formatear la fecha para el input de fecha
-    let dia = ("0" + fechaActual.getDate()).slice(-2);
-    let mes = ("0" + (fechaActual.getMonth() + 1)).slice(-2);
-    let fechaFormateada = fechaActual.getFullYear()+"-"+(mes)+"-"+(dia) ;
-    console.log(fechaFormateada)
     // Establecer la fecha actual en el input de fecha
-    document.getElementById("date1").value = fechaFormateada;
-   
+    const datetimeInput = document.getElementById("date1");
+
+    // Formatear la fecha para el input de datetime
+    datetimeInput.value = dateTimeActualconDiff.toISOString().slice(0,16);
+
+    /*
+    let dia = ("0" + dateTimeActual.getDate()).slice(-2);
+    let mes = ("0" + (dateTimeActual.getMonth() + 1)).slice(-2);
+    let fechaFormateada = dateTimeActual.getFullYear()+"-"+(mes)+"-"+(dia) ;
+    console.log(fechaFormateada)
+    */
+    
+    //datetimeInput.value = dateTimeFormateada;
+
+    datetimeInput.addEventListener("input", (event) => {
+        const fechaIngresada = new Date(event.target.value);
+        fechaIngresada.setMinutes(0);
+        event.target.value = dateValue.toISOString().slice(0, 16);
+    });
+    /////////////
+    
+    
+    function confirmarEnvio(){
+        confirm("¿Está seguro que quiere agendar la cita?")
+    }
+</script>
+<script>
+    const myComboBox = document.getElementById('select_razon');
+    const otherOptionContainer = document.getElementById('caja-otra-opcion');
+    const otherOptionInput = document.getElementById('otra-opcion');
+
+    myComboBox.addEventListener('change', function() {
+    if (myComboBox.value === 'otra') {
+        otherOptionContainer.style.visibility = 'visible';
+    } else {
+        otherOptionContainer.style.visibility = 'hidden';
+    }
+    });
 </script>
 </html>
