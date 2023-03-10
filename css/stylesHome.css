@@ -45,22 +45,23 @@ a{
   padding-left: 25px;
 } 
 
-.mvion{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: 1fr;
-  align-self: center;
-}
-.mision{
-  width: 73%;
-  margin-left: 135px;
+.mvcontainer {
+  display: flex;
+  justify-content: center; /* para centrar horizontalmente */
 }
 
-.vision{
-  width: 73%;
-  margin-right: 135px;
+.mvion {
+  width: 80%;
+  display: flex;
+  gap: 25px;
 }
-p{
+ .vision{
+  height: 30vh;
+  flex: 1;
+ }
+
+
+section p{
   padding: 15px;
   text-align: justify;
 }
@@ -68,16 +69,35 @@ p{
 
 .cpersonal{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(4,1fr);
   align-self: center;
   align-items: center;
+  gap: 20px;
+  margin: 20px;
   
+}
+.cpersonal div{
+  display: grid;
+  align-self: center;
+  align-items: center;
+}
+
+.cpersonal h3{
+  padding: 15px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
+.cpersonal p{
+  padding-top: 1%;
+  padding-right: 10%;
 }
 
 .dct{
-  width: 90%;
-  height: 80%;
+  width: 38%;
+  height: auto;
   border-radius: 20px;
 }
 

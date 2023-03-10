@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Quito N°1 – Policia Nacional del Ecuador</title>
     <link href="css/stylesHome.css" rel="stylesheet">
+    <link rel="import" href="/templates/nav_Bar.html">
 
 </head>
 
 <body>
     <header>
+
         <a href="index.html" tabindex="1" class="logo-container">
             <img src="imgs/logo.svg" alt="Logo de la Policia Nacional del Ecuador con un condor y la bandera">
             <p>Hospital Quito N°1 - Policia Nacional del Ecuador</p>
         </a>
-    
+
         <nav id='banner' class='banner'>
             <ul>
                 <li>
                     <a href="index.html" tabindex="2">
+
                         <h1>Inicio</h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#" tabindex="3">
+                    <a href="especialidades.html" tabindex="3">
                         <h1>Especialidad</h1>
                     </a>
                 </li>
@@ -42,6 +46,7 @@
             <a href="#" tabindex="6">
                 <div class="perfil" alt="perfil de usuario">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                         <path fill-rule="evenodd"
                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
@@ -51,118 +56,163 @@
             </a>
         </nav>
     </header>
-    <div class="contendorNoticias">
-        <div class="slideshow-container" >
-            <div class="mySlides fade">
-                <h2 tabindex="7">NUEVOS HORARIOS</h2>
-                <img src="imgs/horario.jpg" alt="Imagen de horarios de cad especialidad del hospital" tabindex="8">
-                <p tabindex="9">
-                    Cónoce nuestros horarios y disponibilidad
-                </p>
-            </div>
-          
-            <div class="mySlides fade">
-                <h2 tabindex="10">NUEVAS CAMILLAS</h2>
-                <img src="imgs/noticia1.jpg" alt="Imagen de las nuevas camillas y equipos médicos del hospital" tabindex="11">
-                <p tabindex="12">
-                    Nuevos Equipos Médicos de Excelencia
-                </p>
-            </div>
-          
-            <div class="mySlides fade">
-                <h2 tabindex="13">NUESTRO PERSONAL</h2>
-                <img src="imgs/grupo1.jpg" alt="Imagen de los jefes de cada especialidad del hospital" tabindex="14">
-                <p tabindex="15">
-                   Los mejores médicos del país, excelentes profesionales
-                </p>
-            </div>
-          
-            <a class="prev" onclick="plusSlides(-1)" tabindex="16" aria-label="Anterior">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)" tabindex="17" aria-label="Siguiente">&#10095;</a>
-          </div>
-    </div>
+    <section>
+        <div class="contendorNoticias">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <h2 tabindex="7">NUEVOS HORARIOS</h2>
+                    <img src="imgs/horario.jpg" alt="Imagen de horarios de cad especialidad del hospital" tabindex="8">
+                    <p tabindex="9">
+                        Cónoce nuestros horarios y disponibilidad
+                    </p>
+                </div>
 
+                <div class="mySlides fade">
+                    <h2 tabindex="10">NUEVAS CAMILLAS</h2>
+                    <img src="imgs/noticia1.jpg" alt="Imagen de las nuevas camillas y equipos médicos del hospital"
+                        tabindex="11">
+                    <p tabindex="12">
+                        Nuevos Equipos Médicos de Excelencia
+                    </p>
+                </div>
 
-    <div class="mvion">
-        <div class= "subtitle subtitle1 mision">
-            <h3 tabindex="18">MISIÓN</h3>
-            <p class="texto" tabindex="19">
-                Nuestra misión es brindar atención médica de alta calidad y accesible para todos nuestros pacientes. Nos esforzamos por proporcionar servicios médicos integrales y personalizados que satisfagan las necesidades de nuestros pacientes y sus familias. Trabajamos en equipo para ofrecer un ambiente de curación seguro y acogedor para nuestros pacientes, respetando sus necesidades, creencias y valores.    
-            </p>
-        </div>
-        <div class= "subtitle subtitle1 vision">
-            <h3 tabindex="20">VISIÓN</h3>
-            <p class="texto" tabindex="21">
-                Nuestra visión es ser reconocidos como el hospital líder en la comunidad, ofreciendo atención médica innovadora y de calidad superior. Nos esforzamos por establecer relaciones sólidas con nuestros pacientes, sus familias y la comunidad que servimos. Queremos ser reconocidos por nuestro compromiso con la excelencia en la atención al paciente y en la investigación médica. Nuestro objetivo es seguir siendo líderes en el campo de la medicina, mejorando la salud y el bienestar de las personas que confían en nosotros para su cuidado médico.</p>
+                <div class="mySlides fade">
+                    <h2 tabindex="13">NUESTRO PERSONAL</h2>
+                    <img src="imgs/grupo1.jpg" alt="Imagen de los jefes de cada especialidad del hospital"
+                        tabindex="14">
+                    <p tabindex="15">
+                        Los mejores médicos del país, excelentes profesionales
+                    </p>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)" tabindex="16" aria-label="Anterior">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" tabindex="17" aria-label="Siguiente">&#10095;</a>
+            </div>
         </div>
 
-    </div>
-   <!--CONOCE PERSONAL-->
-    <div class= "subtitle personalCont">
-        <h3 tabindex="22">CONOCE A NUESTRO PERSONAL</h3>
-        <div class="cpersonal">
-            <div>
-                <img src="imgs/grupo1.jpg" class = "dct"  alt="Imagen de los especialistas del departamento de Medicina General" tabindex="23">
-            </div>
-            <p tabindex="24">
-                Equipo de profesionales calificado con orientación al servicio y comprometidos con el bienestar de nuestros usuarios, el paciente y su familia.
-            </p>
-            
-            <div>
-                <img src="imgs/grupo2.jpg" class = "dct"  alt="Imagen de los especialistas del departamento de Gastroenterología" tabindex="25">
-            </div>
-            <p tabindex="26">
-                Servicios de salud integrales, con calidad y calidez, basándonos en soportes humanos, científicos y tecnológicos.
-            </p>
+        <div class="mvcontainer">
+            <div class="mvion">
+                <div class="subtitle subtitle1  vision">
+                    <h3 tabindex="18">MISIÓN</h3>
+                    <p class="texto" tabindex="19">
+                        Nuestra misión es brindar atención médica de alta calidad y accesible para todos nuestros
+                        pacientes.
+                        Nos esforzamos por proporcionar servicios médicos integrales y personalizados que satisfagan las
+                        necesidades de nuestros pacientes y sus familias. Trabajamos en equipo para ofrecer un ambiente
+                        de
+                        curación seguro y acogedor para nuestros pacientes, respetando sus necesidades, creencias y
+                        valores.
+                    </p>
+                </div>
+                <div class="subtitle subtitle1 vision">
+                    <h3 tabindex="20">VISIÓN</h3>
+                    <p class="texto" tabindex="21">
+                        Nuestra visión es ser reconocidos como el hospital líder en la comunidad, ofreciendo atención
+                        médica
+                        innovadora y de calidad superior. Nos esforzamos por establecer relaciones sólidas con nuestros
+                        pacientes, sus familias y la comunidad que servimos. Queremos ser reconocidos por nuestro
+                        compromiso
+                        con la excelencia en la atención al paciente y en la investigación médica. Nuestro objetivo es
+                        seguir siendo líderes en el campo de la medicina, mejorando la salud y el bienestar de las
+                        personas
+                        que confían en nosotros para su cuidado médico.</p>
+                </div>
 
-            <div>
-                <img src="imgs/grupo3.jpg" class = "dct"  alt="Imagen de los especialistas del departamento de Dermatología" tabindex="27">
             </div>
-            <p tabindex="28">
-                Nuestra gestión esta basada en procesos cuyos indicadores nos permiten mantener siempre una mejora continua.
-            </p>
-
-            <div>
-                <img src="imgs/grupo1.jpg" class = "dct"  alt="Imagen de los especialistas del departamento de Otorrinolaringología" tabindex="29">
-            </div>
-            <p tabindex="30">
-                La misión de nuestra institución esta basada en principios dominicanos, en la defensa de la vida y en valores morales, éticos y espirituales.
-            </p>
-      
         </div>
-    </div>
+
+        <!--CONOCE PERSONAL-->
+        <div class="subtitle personalCont">
+            <h3 tabindex="22">CONOCE A NUESTRO PERSONAL</h3>
+            <div class="cpersonal">
+                <div>
+                    <img src="imgs/grupo1.jpg" class="dct"
+                        alt="Imagen de los especialistas del departamento de Medicina General" tabindex="23">
+                </div>
+                <section class="colum1">
+                    <h3 class="newFont">Personal Del Departamento de Cardiología</h3>
+                    <p tabindex="24">
+                        Equipo de profesionales calificado con orientación al servicio y comprometidos con el bienestar
+                        de nuestros usuarios, el paciente y su familia.
+                    </p>
+                </section>
+
+
+                <div>
+                    <img src="imgs/grupo2.jpg" class="dct"
+                        alt="Imagen de los especialistas del departamento de Gastroenterología" tabindex="25">
+                </div>
+                <section>
+                    <h3 class="newFont">Personal Del Departamento de Oftomología</h3>
+                    <p tabindex="26">
+                        Servicios de salud integrales, con calidad y calidez, basándonos en soportes humanos,
+                        científicos y tecnológicos.
+                    </p>
+                </section>
+
+
+                <div>
+                    <img src="imgs/grupo3.jpg" class="dct"
+                        alt="Imagen de los especialistas del departamento de Dermatología" tabindex="27">
+                </div>
+                <section>
+                    <h3 class="newFont">Personal Del Departamento de Gastroenterología</h3>
+                    <p tabindex="28">
+                        Nuestra gestión esta basada en procesos cuyos indicadores nos permiten mantener siempre una
+                        mejora continua.
+                    </p>
+                </section>
+
+                <div>
+                    <img src="imgs/grupo1.jpg" class="dct"
+                        alt="Imagen de los especialistas del departamento de Otorrinolaringología" tabindex="29">
+                </div>
+                <section>
+                    <h3 class="newFont">Personal Del Departamento de Dermatología</h3>
+                    <p tabindex="30">
+                        La misión de nuestra institución esta basada en principios dominicanos, en la defensa de la vida
+                        y en valores morales, éticos y espirituales.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+    </section>
+
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
 
         function plusSlides(n) {
-        showSlides((slideIndex += n));
+            showSlides((slideIndex += n));
         }
 
         function currentSlide(n) {
-        showSlides((slideIndex = n));
+            showSlides((slideIndex = n));
         }
 
         function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
 
-    </script> 
+    </script>
 </body>
+
 </html>
