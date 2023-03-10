@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="btn">
-                    <button type="submit" tabindex="14" >Agendar</button>
+                    <button type="submit" tabindex="14" onclick="confirmarEnvio()">Agendar</button>
                 </div>
                 
               </form>
@@ -151,8 +151,11 @@
         event.target.value = dateValue.toISOString().slice(0, 16);
     });
     /////////////
-
     
+    
+    function confirmarEnvio(){
+        confirm("¿Está seguro que quiere agendar la cita?")
+    }
 </script>
 <script>
     const myComboBox = document.getElementById('select_razon');
