@@ -174,7 +174,7 @@ input, textarea {
 .faq {
     width: 100%;
     box-sizing: content-box;
-    margin-top: 50px;
+    margin: 50px 0;
     background-color: #e3e4e4;
     text-align: left;
     border-radius: 20px;
